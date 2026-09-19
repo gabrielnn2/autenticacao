@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Concluído</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+    h2 { color: #4CAF50; }
+  </style>
+</head>
+<body>
+  <h2>Autenticação Concluída com Sucesso!</h2>
+  <p>Você já pode fechar esta aba com segurança e voltar para o aplicativo.</p>
+
+  <script>
+    // Pega o token gerado pelo Google e repassa para o seu aplicativo desktop
+    const appUrl = "timetracker://login-callback" + window.location.hash;
+    window.location.replace(appUrl);
+  </script>
+</body>
+</html>
